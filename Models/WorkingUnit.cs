@@ -26,7 +26,7 @@ namespace BotFactory.Models
         }
         public async virtual Task<bool> WorkEnds()
         {
-            await Move(WorkingPos);
+            await Move(ParkingPos);
             OnStatusChanged(new StatusChangedEventArgs { NewStatus = "Parking" });
             return true;
         }
